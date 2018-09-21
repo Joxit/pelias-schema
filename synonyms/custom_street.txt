@@ -23,3 +23,7 @@
 #   foo => foo bar, baz
 #
 # =============================================================================
+bd, bld, blvd, boul, bvd, boulevard
+ave, av, avenue
+saint, st, street
+sainte, ste, suite
