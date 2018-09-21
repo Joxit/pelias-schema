@@ -29,11 +29,11 @@ function generate(){
       "tokenizer": {
         "peliasNameTokenizer": {
           "type": "pattern",
-          "pattern": "[\\s,/\\\\]+"
+          "pattern": "[\\s,/\\\\-]+"
         },
         "peliasStreetTokenizer": {
           "type": "pattern",
-          "pattern": "[\\s,/\\\\]+"
+          "pattern": "[\\s,/\\\\-]+"
         }
       },
       "analyzer": {
@@ -105,23 +105,6 @@ function generate(){
             "notnull"
           ]
         },
-        "peliasQueryFullToken" : {
-          "type": "custom",
-          "tokenizer" : "peliasNameTokenizer",
-          "char_filter" : ["punctuation", "nfkc_normalizer"],
-          "filter": [
-            "lowercase",
-            "icu_folding",
-            "trim",
-            "remove_ordinals",
-            "street_suffix",
-            "directionals",
-            "ampersand",
-            "removeAllZeroNumericPrefix",
-            "unique_only_same_position",
-            "notnull"
-          ]
-        },
         "peliasPhrase": {
           "type": "custom",
           "tokenizer":"peliasNameTokenizer",
@@ -132,6 +115,7 @@ function generate(){
             "remove_duplicate_spaces",
             "ampersand",
             "custom_name",
+            "custom_street",
             "street_suffix",
             "directionals",
             "icu_folding",
