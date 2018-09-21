@@ -83,6 +83,7 @@ function generate(){
             "trim",
             "remove_ordinals",
             "removeAllZeroNumericPrefix",
+            "custom_street",
             "unique_only_same_position",
             "notnull"
           ]
@@ -103,23 +104,6 @@ function generate(){
             "notnull"
           ]
         },
-        "peliasQueryFullToken" : {
-          "type": "custom",
-          "tokenizer" : "peliasNameTokenizer",
-          "char_filter" : ["punctuation", "nfkc_normalizer"],
-          "filter": [
-            "lowercase",
-            "icu_folding",
-            "trim",
-            "remove_ordinals",
-            "street_suffix",
-            "directionals",
-            "ampersand",
-            "removeAllZeroNumericPrefix",
-            "unique_only_same_position",
-            "notnull"
-          ]
-        },
         "peliasPhrase": {
           "type": "custom",
           "tokenizer":"peliasNameTokenizer",
@@ -130,6 +114,7 @@ function generate(){
             "remove_duplicate_spaces",
             "ampersand",
             "custom_name",
+            "custom_street",
             "street_suffix",
             "directionals",
             "icu_folding",
