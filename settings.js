@@ -89,6 +89,7 @@ function generate(){
             "trim",
             "remove_ordinals",
             "removeAllZeroNumericPrefix",
+            "custom_street",
             "unique_only_same_position",
             "notnull"
           ]
@@ -103,6 +104,7 @@ function generate(){
             "remove_duplicate_spaces",
             "ampersand",
             "custom_name",
+            "custom_street",
             "street_suffix",
             "directionals",
             "icu_folding",
